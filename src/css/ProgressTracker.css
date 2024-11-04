@@ -1,0 +1,118 @@
+@font-face {
+    font-family: 'wsf';
+    src: url('../fonts/VCRosdNEUE.ttf') format('truetype');
+}
+body{
+    font-family: 'wsf', sans-serif;
+}
+:root {
+    --primary-color: #4a90e2;
+    --secondary-color: #82ca9d;
+    --background-color: #f4f7fa;
+    --text-color: #333333;
+    --card-background: #ffffff;
+    --border-color: #e0e0e0;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --border-radius: 8px;
+    --transition: all 0.3s ease;
+}
+
+.progress-tracker {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--card-background);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 800px;
+    width: 100%;
+    
+}
+
+.progress-tracker h2 {
+    color: var(--primary-color);
+    font-size: 2.1rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #537d92;;
+    font-family: 'wsf', sans-serif;
+    margin-top: 1px;
+}
+
+.progress-tracker p {
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--text-color);
+}
+
+.chart-container {
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 1rem;
+    transition: var(--transition);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+button:hover {
+    background-color: darken(var(--primary-color), 10%);
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .progress-tracker {
+        padding: 1rem;
+        margin: 1rem;
+    }
+
+    .progress-tracker h2 {
+        font-size: 1.5rem;
+    }
+
+    .chart-container {
+        width: 100% !important;
+        height: auto !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .progress-tracker h2 {
+        font-size: 1.2rem;
+    }
+
+    button {
+        padding: 0.5rem 1rem;
+        font-size: 0.9rem;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.progress-tracker {
+    animation: fadeIn 0.5s ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .progress-tracker {
+        animation: none;
+    }
+}

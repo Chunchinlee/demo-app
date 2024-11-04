@@ -1,0 +1,140 @@
+@font-face {
+    font-family: 'wsf';
+    src: url('../fonts/VCRosdNEUE.ttf') format('truetype');
+}
+body{
+    font-family: 'wsf', sans-serif;
+}
+.navigation {
+    display: flex;
+    align-items: center;
+    font-family: 'wsf', sans-serif;
+    position: relative; 
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.logo-image {
+    height: 40px;
+    width: auto;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 15px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #537d92; 
+}
+
+.mobile-menu-button {
+    display: none; /* Hidden by default */
+    background-color: #6494aa; /* Set your desired background color */
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    margin-left: auto; /* Pushes button to the right */
+    padding: 10px; /* Optional: Add padding for better touch targets */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    z-index: 20; /* Ensure button is above other elements */
+}
+
+.mobile-menu-button:hover {
+    background-color: #537d92; /* Change this to your preferred hover color */
+}
+
+.user-menu {
+    position: relative;
+}
+
+.user-email {
+    color: #fff;
+    margin-right: 15px;
+    cursor: pointer; /* Makes it clear it's clickable */
+}
+
+.user-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.user-dropdown.show {
+    display: block; /* Show dropdown when active */
+}
+
+.user-dropdown a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #333;
+}
+
+.user-dropdown a:hover {
+    background-color: #f0f0f0;
+}
+
+.logout-button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #6494aa; 
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.logout-button:hover {
+    background-color: #537d92; 
+
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; /* Hide the links by default on mobile */
+        flex-direction: column; /* Stack the links vertically */
+        position: absolute;
+        top: 60px; /* Adjust based on your nav height */
+        right: 0;
+        background-color: rgba(51, 51, 51, 0.95); /* Semi-transparent background */
+        width: 100%; /* Full width dropdown */
+        z-index: 15; /* Ensure dropdown is above other elements */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Add shadow for better visibility */
+    }
+
+    .nav-links.show {
+        display: flex; /* Show the links when dropdown is active */
+    }
+
+    .mobile-menu-button {
+        display: block; /* Show the mobile menu button */
+    }
+    .logout-button{
+        text-align: center;
+        width: 100%;
+        margin-top: 10px;
+
+    }
+    
+}

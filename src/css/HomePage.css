@@ -1,0 +1,60 @@
+.home-page {
+    background-image: url('../images/fixmebg.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box; 
+}
+
+.home-page h1, .home-page p, .download-button {
+    max-width: 500px; 
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.home-page h1 {
+    font-size: 3.5rem; 
+    margin-bottom: 20px;
+    color: black;
+    font-family: 'wsf', sans-serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.home-page p {
+    font-size: 1.25rem; 
+    margin-bottom: 40px;
+    font-family: 'wsf', sans-serif;
+}
+
+.download-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #537d92;
+    color: white;
+    padding: 15px 30px;
+    font-family: 'wsf', sans-serif;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    max-width: 250px; 
+}
+
+.download-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.4);
+}
+
+.download-button img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}

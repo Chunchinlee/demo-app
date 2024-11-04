@@ -1,0 +1,90 @@
+@font-face {
+    font-family: 'MinecraftTen';
+    src: url('./fonts/MinecraftTen-VGORe.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'VCRosdNEUE';
+    src: url('./fonts/VCRosdNEUE.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'WindowsCommandPrompt';
+    src: url('./fonts/windows_command_prompt.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'WindowsFont';
+    src: url('./fonts/WindowsFont.ttf') format('truetype');
+}
+
+:root {
+    --primary-color: #4a90e2;
+    --secondary-color: #45a049;
+    --background-color: #0A21C0;
+    --text-color: #ffffff;
+    --card-background: rgba(255, 255, 255, 0.1);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'MinecraftTen', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'VCRosdNEUE', sans-serif;
+    margin-bottom: 20px;
+}
+
+code {
+    font-family: 'WindowsCommandPrompt', monospace;
+}
+
+.button {
+    font-family: 'WindowsFont', sans-serif;
+    cursor: pointer;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: var(--secondary-color);
+}
+
+input, textarea {
+    font-family: 'MinecraftTen', sans-serif;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid var(--primary-color);
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--text-color);
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+}

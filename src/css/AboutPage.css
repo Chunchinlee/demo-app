@@ -1,0 +1,82 @@
+@font-face {
+    font-family: 'wsf';
+    src: url('../fonts/VCRosdNEUE.ttf') format('truetype');
+}
+body{
+    font-family: 'wsf', sans-serif;
+}
+.about-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.about-page h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+    font-family: 'wsf', sans-serif;
+    color:#537d92;
+}
+
+.about-page p {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    text-align: center;
+    font-family: 'wsf', sans-serif;
+}
+
+.developer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px; 
+    justify-items: center; 
+    justify-content: center; 
+}
+
+.developer-card {
+    background-color: #2a2a2a;
+    border-radius: 10px;
+    padding: 20px; 
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.developer-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.1);
+}
+
+.developer-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.developer-card p {
+    font-size: 1rem;
+    margin-bottom: 0;
+}
+
+/* Media query for mobile (2x2 grid on screens smaller than 768px) */
+@media (max-width: 768px) {
+    .developer-grid {
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 15px; 
+        
+    }
+
+    .developer-card {
+        padding: 15px; 
+    }
+
+    .developer-image {
+        width: 120px; 
+        height: 120px;
+    }
+
+    .developer-card p {
+        font-size: 0.9rem; 
+    }
+}

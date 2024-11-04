@@ -1,0 +1,321 @@
+/* DashboardStudent.css */
+@font-face {
+    font-family: 'wsf';
+    src: url('../fonts/VCRosdNEUE.ttf') format('truetype');
+}
+body {
+    font-family: 'wsf', sans-serif;
+}
+
+:root {
+    --primary-color: #4a90e2;
+    --secondary-color: #2586c7;
+    --background-color: #f0f4f8;
+    --card-background: #ffffff;
+    --text-color: #333333;
+    --text-light: #666666;
+    --border-radius: 12px;
+    --box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+}
+
+body {
+    font-family: 'wsf', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.dashboard-student {
+    font-family: 'wsf', sans-serif;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    height: 400px;
+}
+
+.dashboard-student h1 {
+    font-family: 'wsf', sans-serif;
+    color: #537d92;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    text-align: center;
+    font-family: 'wsf', sans-serif;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.dashboard-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.stats-card h2 {
+    color: var(--primary-color);
+    font-size: 2.1rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #537d92;
+    font-family: 'wsf', sans-serif;
+    margin-top: 1px;
+}
+
+.stats-card {
+    color: #000;
+    background-color: var(--card-background);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 800px;
+    width: 100%;
+    font-family: 'wsf', sans-serif;
+    height: 400px;
+    overflow-y: auto;
+}
+
+.recent-activity-card h2 {
+    color: var(--primary-color);
+    font-size: 2.1rem;
+    text-align: center;
+    color: #537d92;
+    font-family: 'wsf', sans-serif;
+    margin-top: 1px;
+}
+
+.parent-container {
+    display: flex;
+    justify-content: flex-end; /* Align children to the right */
+}
+
+.recent-activity-card {
+    color: #000;
+    background-color: var(--card-background);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 2rem;
+    margin: 1rem 26.7rem; /* Top: 40rem, Right: 0, Bottom: 0, Left: 0 */
+    max-width: 800px;
+    width: 85%; /* Less than 100% */
+    font-family: 'wsf', sans-serif;
+    height: 480px;
+    overflow-y: auto;
+}
+
+.leaderboard {
+    color: #000;
+    background-color: var(--card-background);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 1rem;
+    margin: 2rem auto;
+    max-width: 800px;
+    width: 100%;
+    font-family: 'wsf', sans-serif;
+    height: 400px;
+    overflow-y: auto;
+}
+
+.progress-tracker {
+    color: #000;
+    background-color: var(--card-background);
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 800px;
+    width: 100%;
+    font-family: 'wsf', sans-serif;
+    height: 400px;
+}
+
+.achievements {
+    color: #000;
+    font-family: 'wsf', sans-serif;
+    background-color: var(--card-background);
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    margin: 1rem 0; /* Top: 40rem, Right: 0, Bottom: 0, Left: 0 */
+}
+
+.stats-card:hover,
+.recent-activity-card:hover,
+.leaderboard:hover,
+.progress-tracker:hover,
+.achievements:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.stats-card p,
+.recent-activity-card p {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.recent-activity-card ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.recent-activity-card li {
+    background-color: #f9f9f9;
+    border-radius: 6px;
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.recent-activity-card li:hover {
+    background-color: #f0f0f0;
+}
+
+button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: var(--transition);
+    margin-top: 1rem;
+}
+
+button:hover {
+    background-color: #3a7bc8;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .dashboard-student {
+        padding: 1rem;
+    }
+
+    .dashboard-content {
+        grid-template-columns: 1fr; /* Stack cards vertically */
+        padding: 0; /* Remove extra padding */
+    }
+
+    h1 {
+        font-size: 2rem; /* Adjust heading size */
+    }
+
+    h2 {
+        font-size: 1.5rem; /* Adjust subheading size */
+    }
+    .recent-activity-card{
+        padding: 2rem; 
+        margin:  0; 
+        max-width: 100%;
+        width: 90%;
+    }
+    .stats-card,
+    .leaderboard,
+    .progress-tracker,
+    .achievements {
+        padding: 1rem; /* Reduce padding */
+        margin: 1rem auto; /* Center cards with auto margins */
+        max-width: 100%; /* Ensure cards use full width */
+    }
+
+    .recent-activity-card {
+        margin: 1rem; /* Ensure consistent margin */
+    }
+
+    button {
+        width: 15%; /* Make buttons full width */
+        padding: 1rem; /* Increase padding for touch targets */
+        font-size: 1.2rem; /* Adjust font size for better readability */
+    }
+}
+
+/* Leaderboard styles */
+.leaderboard table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+.leaderboard th,
+.leaderboard td {
+    text-align: left;
+    padding: 0.75rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.leaderboard th {
+    background-color: #f5f5f5;
+    font-weight: bold;
+    color: var(--text-light);
+}
+
+.leaderboard tr:last-child td {
+    border-bottom: none;
+}
+
+/* ProgressTracker styles */
+.progress-tracker .progress-bar {
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    height: 20px;
+    margin-top: 1rem;
+    overflow: hidden;
+}
+
+.progress-tracker .progress {
+    background-color: var(--primary-color);
+    height: 100%;
+    transition: width 0.5s ease-in-out;
+}
+
+/* Achievements styles */
+.achievements ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.achievements li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.achievements .achievement-icon {
+    width: 40px;
+    height: 40px;
+    background-color: var(--secondary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1rem;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.achievements .achievement-info {
+    flex: 1;
+}
+
+.achievements .achievement-name {
+    font-weight: bold;
+    margin-bottom: 0.25rem;
+}
+
+.achievements .achievement-description {
+    font-size: 0.9rem;
+    color: var(--text-light);
+}

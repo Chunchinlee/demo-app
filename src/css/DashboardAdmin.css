@@ -1,0 +1,541 @@
+@font-face {
+    font-family: 'wsf';
+    src: url('../fonts/VCRosdNEUE.ttf') format('truetype');
+}
+body{
+    font-family: 'wsf', sans-serif;
+}
+   /* Modern Admin Dashboard CSS */
+    :root {
+        --primary-color: #2563eb;
+        --secondary-color: #3b82f6;
+        --success-color: #22c55e;
+        --danger-color: #ef4444;
+        --warning-color: #f59e0b;
+        --background-color: #0f172a;
+        --card-bg: #1e293b;
+        --text-primary: #f8fafc;
+        --text-secondary: #94a3b8;
+        --border-color: #334155;
+        --hover-color: #1d4ed8;
+        --transition: all 0.3s ease;
+    }
+    
+    .dashboard-admin {
+        min-height: 100vh;
+        background-color: var(--background-color);
+        color: var(--text-primary);
+        padding: 2rem;
+        font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    }
+    
+    /* Header Styles */
+    .dashboard-admin h1 {
+        font-size: 2.5rem;
+        font-weight: 400;
+        margin-bottom: 2rem;
+        color: var(--text-primary);
+        text-align: center;
+        letter-spacing: -0.025em;
+        font-family: 'wsf', sans-serif;
+    }
+    
+    .dashboard-admin h2 {
+        font-size: 1.875rem;
+        font-weight: 600;
+        margin: 2rem 0 1.5rem;
+        color: var(--text-primary);
+    }
+    
+    .dashboard-admin h3 {
+        font-size: 1.25rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        color: var(--text-primary);
+    }
+    
+    /* Stats Overview Section */
+    .stats-overview {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+        margin-bottom: 2rem;
+    }
+    
+    .stat-card {
+        background-color: var(--card-bg);
+        border-radius: 1rem;
+        padding: 1.5rem;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        transition: var(--transition);
+    }
+    
+    .stat-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    }
+    
+    .stat-card h3 {
+        color: var(--text-secondary);
+        font-size: 1.3rem;
+        margin-bottom: 0.5rem;
+        font-family: 'wsf', sans-serif;
+    }
+    
+    .stat-card p {
+        font-size: 2rem;
+        font-weight: 700;
+        color: var(--primary-color);
+        color:#f8fafc;
+        font-family: 'wsf', sans-serif;
+    }
+    
+    /* Section Styles */
+    .section {
+        background-color: var(--card-bg);
+        border-radius: 1rem;
+        padding: 2rem;
+        margin-bottom: 2rem;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        
+    }
+    .section h2{
+        font-family: 'wsf', sans-serif;
+    }
+    
+    /* Form Elements */
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="number"],
+    select {
+        width: 100%;
+        padding: 0.75rem 1rem;
+        margin-bottom: 1rem;
+        border: 1px solid var(--border-color);
+        border-radius: 0.5rem;
+        background-color: var(--background-color);
+        color: var(--text-primary);
+        font-size: 1rem;
+        transition: var(--transition);
+    }
+    
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="password"]:focus,
+    input[type="number"]:focus,
+    select:focus {
+        outline: none;
+        border-color: var(--primary-color);
+        box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+    }
+    
+    /* Password Input Container */
+    .password-input {
+        position: relative;
+        margin-bottom: 1rem;
+    }
+    
+    .password-input label {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        color: var(--text-secondary);
+        font-size: 0.875rem;
+        margin-top: 0.5rem;
+    }
+    
+    /* Button Styles */
+    button {
+        padding: 0.75rem 1.5rem;
+        border: none;
+        border-radius: 0.5rem;
+        background-color: var(--primary-color);
+        color: white;
+        font-weight: 600;
+        cursor: pointer;
+        transition: var(--transition);
+        margin: 0.5rem;
+    }
+    
+    button:hover {
+        background-color: var(--hover-color);
+        transform: translateY(-1px);
+    }
+    
+    button:active {
+        transform: translateY(0);
+    }
+    
+    /* Action Buttons */
+    button[onClick*="Delete"] {
+        background-color: var(--danger-color);
+    }
+    
+    button[onClick*="Reset"] {
+        background-color: var(--warning-color);
+    }
+    
+    button[onClick*="Enable"] {
+        background-color: var(--success-color);
+    }
+    
+    button[onClick*="Disable"] {
+        background-color: var(--warning-color);
+    }
+    .studentadded {
+        background-color: #3498db; 
+       font-size: 8px;  
+       cursor: pointer; 
+       transition: background-color 0.3s ease; 
+       font-family: 'wsf', sans-serif; 
+       margin: 0 950px;
+
+    }
+    .button-container {
+        display: flex;          
+        justify-content: flex-start; /* Align buttons to the left */
+        align-items: center;   
+        margin: 0;       
+        gap: 10px;      
+    }
+    .addnew-student{
+    display: flex; 
+    gap: 10px;
+    }
+    .addnew {
+        background-color: #3498db; 
+        color: white; 
+        border: none; 
+        font-size: 12px; 
+        border-radius: 4px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease; 
+        font-family: 'wsf', sans-serif; 
+        margin: 0;
+    }  
+    
+    .cancelnew {
+        background-color: #3498db; 
+        color: white; 
+        border: none; 
+        font-size: 12px; 
+        border-radius: 4px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease; 
+        font-family: 'wsf', sans-serif; 
+        margin: 0; /* Remove horizontal margin */
+    }
+    .handlequiz {
+        background-color: #3498db; 
+        color: white; 
+        border: none; 
+        font-size: 12px; 
+        border-radius: 4px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease; 
+        font-family: 'wsf', sans-serif; 
+        margin: 0; /* Remove horizontal margin */
+    }
+     button.cancelnew:hover {
+        background-color: rgb(255, 0, 0)
+    }
+    .handlepassword,
+    .handledisable,
+    .handledelete {
+        background-color: #3498db; 
+        color: white; 
+        border: none; 
+        font-size: 12px; 
+        border-radius: 4px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease; 
+        font-family: 'wsf', sans-serif; 
+        margin: 0 5px; 
+    }
+     button.handledelete:hover {
+        background-color: rgb(255, 0, 0)
+    }
+    .handleleader {
+        background-color: #3498db; 
+        color: white; 
+        border: none; 
+        font-size: 12px; 
+        border-radius: 4px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease; 
+        font-family: 'wsf', sans-serif; 
+        margin: 0; 
+    }
+    .handledeletequiz{
+        background-color: #3498db; 
+        color: white; 
+        border: none; 
+        font-size: 12px; 
+        border-radius: 4px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease; 
+        font-family: 'wsf', sans-serif; 
+        margin: 0; 
+    }
+    .handleaddquestion{
+        background-color: #3498db; 
+        color: white; 
+        border: none; 
+        font-size: 12px; 
+        border-radius: 4px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease; 
+        font-family: 'wsf', sans-serif; 
+        margin: 0; 
+    }
+    .handleaddquiz{
+        background-color: #3498db; 
+        color: white; 
+        border: none; 
+        font-size: 12px; 
+        border-radius: 4px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease; 
+        font-family: 'wsf', sans-serif; 
+        margin: 0; 
+    }
+    .handlequiz{
+        background-color: #3498db; 
+        color: white; 
+        border: none; 
+        font-size: 12px; 
+        border-radius: 4px; 
+        cursor: pointer; 
+        transition: background-color 0.3s ease; 
+        font-family: 'wsf', sans-serif; 
+        margin: 0; 
+    }
+    /* List Styles */
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 1rem 0;
+    }
+    
+    li {
+        padding: 1rem;
+        border: 1px solid var(--border-color);
+        border-radius: 0.5rem;
+        margin-bottom: 0.75rem;
+        background-color: var(--background-color);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+    
+    /* Table Styles */
+    table {
+        width: 100%;
+        border-collapse: separate;
+        border-spacing: 0;
+        margin: 1rem 0;
+    }
+    
+    th, td {
+        padding: 1rem;
+        text-align: left;
+        border-bottom: 1px solid var(--border-color);
+    }
+    
+    th {
+        background-color: var(--background-color);
+        color: var(--text-secondary);
+        font-weight: 600;
+    }
+    
+    tr:hover {
+        background-color: rgba(255, 255, 255, 0.02);
+    }
+    
+    /* Questions Section */
+    .questions-section {
+        background-color: var(--background-color);
+        padding: 1.5rem;
+        border-radius: 0.75rem;
+        margin: 1.5rem 0;
+    }
+    
+    /* Checkbox Styles */
+    input[type="checkbox"] {
+        width: 1rem;
+        height: 1rem;
+        margin-right: 0.5rem;
+        accent-color: var(--primary-color);
+    }
+    
+    /* Responsive Design */
+    @media screen and (max-width: 768px) {
+        .dashboard-admin {
+        padding: 1rem;
+        }
+    
+        .stats-overview {
+        grid-template-columns: 1fr;
+        }
+    
+        .section {
+        padding: 1.5rem;
+        }
+    
+        li {
+        flex-direction: column;
+        align-items: flex-start;
+        }
+    
+        li button {
+        width: 100%;
+        margin: 0.25rem 0;
+        }
+    
+        table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+        }
+    
+        .questions-section {
+        padding: 1rem;
+        }
+    }
+    
+    /* Animations */
+    @keyframes fadeIn {
+        from {
+        opacity: 0;
+        transform: translateY(10px);
+        }
+        to {
+        opacity: 1;
+        transform: translateY(0);
+        }
+    }
+    
+    .section {
+        animation: fadeIn 0.3s ease-out;
+    }
+    
+    /* Scrollbar Styling */
+    ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+    }
+    
+    ::-webkit-scrollbar-track {
+        background: var(--background-color);
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background: var(--border-color);
+        border-radius: 4px;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+        background: var(--text-secondary);
+    }
+    
+    /* Toast Notifications */
+    .toast {
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        padding: 1rem 2rem;
+        border-radius: 0.5rem;
+        background-color: var(--card-bg);
+        color: var(--text-primary);
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+        animation: slideIn 0.3s ease-out;
+    }
+    
+    @keyframes slideIn {
+        from {
+        transform: translateX(100%);
+        opacity: 0;
+        }
+        to {
+        transform: translateX(0);
+        opacity: 1;
+        }
+    }
+    
+    /* Focus Visible Styles */
+    :focus-visible {
+        outline: 2px solid var(--primary-color);
+        outline-offset: 2px;
+    }
+    
+    /* Loading States */
+    .loading {
+        opacity: 0.7;
+        pointer-events: none;
+        position: relative;
+    }
+    
+    .loading::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 1.5rem;
+        height: 1.5rem;
+        border: 2px solid var(--text-secondary);
+        border-top-color: var(--primary-color);
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+    }
+    
+    @keyframes spin {
+        to {
+        transform: rotate(360deg);
+        }
+    }
+    
+    @media (max-width: 768px) {
+        .dashboard-admin {
+        padding: 1rem;
+        }
+    
+        .stats-overview {
+        flex-direction: column;
+        }
+    
+        .stat-card {
+        width: 100%;
+        }
+    
+        li {
+        flex-direction: column;
+        align-items: flex-start;
+        }
+    
+        li button {
+        margin-left: 0;
+        margin-top: 0.5rem;
+        }
+        .button-container {
+            flex-direction: column; 
+            align-items: stretch; 
+        }
+        
+        .handlepassword,
+        .handledisable,
+        .handledelete,
+        .studentadded,
+        .handleleader,
+        .handlequiz
+        .handledeletequiz,
+        .handleaddquestion,
+        .handleaddquiz,
+        .handlequiz {
+            width: 100%; 
+        }
+
+    }
