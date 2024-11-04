@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/demo-app/static/css/main.c99ea35c.css",
+    "main.js": "/demo-app/static/js/main.506ca9bf.js",
+    "static/js/453.1b2fbb58.chunk.js": "/demo-app/static/js/453.1b2fbb58.chunk.js",
+    "static/media/fixmebg.jpg": "/demo-app/static/media/fixmebg.7ad37b5bf72edb9a434e.jpg",
+    "static/media/Tristan.jpg": "/demo-app/static/media/Tristan.145c3c8467a83976e70e.jpg",
+    "static/media/Torres.png": "/demo-app/static/media/Torres.b8e643d3795368019dac.png",
+    "static/media/WindowsFont.ttf": "/demo-app/static/media/WindowsFont.1cbbbd75409adc7cc946.ttf",
+    "static/media/windows_command_prompt.ttf": "/demo-app/static/media/windows_command_prompt.1cbbbd75409adc7cc946.ttf",
+    "static/media/Ramos.jpg": "/demo-app/static/media/Ramos.2ac6acc9570f0ad12ad9.jpg",
+    "static/media/VCRosdNEUE.ttf": "/demo-app/static/media/VCRosdNEUE.acbbc64bd1dc4d5d166a.ttf",
+    "static/media/Luares.jpg": "/demo-app/static/media/Luares.030390bfffb1bf8e1e04.jpg",
+    "static/media/MinecraftTen-VGORe.ttf": "/demo-app/static/media/MinecraftTen-VGORe.cd1235551b5f89f4710f.ttf",
+    "index.html": "/demo-app/index.html",
+    "main.c99ea35c.css.map": "/demo-app/static/css/main.c99ea35c.css.map",
+    "main.506ca9bf.js.map": "/demo-app/static/js/main.506ca9bf.js.map",
+    "453.1b2fbb58.chunk.js.map": "/demo-app/static/js/453.1b2fbb58.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c99ea35c.css",
+    "static/js/main.506ca9bf.js"
+  ]
+}
